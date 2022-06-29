@@ -1,0 +1,136 @@
+*,*::after,*::before{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.15s ease-in;
+}
+
+html{
+    font-size: 62.5%;
+}
+$color-cream : rgba(242,233,226,1);
+$color-green: rgba(61,129,104,1);
+$color-grey: darken(grey, 20);
+body{
+    font-size: 1.6rem;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 144rem;
+    margin: 0 auto;
+    height: 100vh;
+    background-color: $color-cream;
+}
+
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 95%;
+    .box{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        background-color: white;
+        width: 50%;
+        border-radius: 10px;
+        overflow: hidden;
+        .img-section{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background-image: url(/images/image-product-desktop.jpg);
+            background-position: 0;
+            background-size: cover;
+            background-clip:content-box;
+        }
+        .property-section{
+            display: flex;
+            flex-direction: column;
+            gap: 2.4rem;
+            width: 100%;
+            padding: 4rem;
+            color: $color-grey;
+            .category{
+                text-transform: uppercase;
+                letter-spacing: 0.6rem;
+            }
+            .title{
+                color: darken(grey, 35);
+                font-family: 'Oleo Script Swash Caps', cursive;
+            }
+            .description{
+                line-height: 2.8rem;
+                font-weight: lighter;
+            }
+            .price-section{
+                display: flex;
+                align-items: center;
+                gap: 3.2rem;
+                .current-price{
+                    font-family: 'Oleo Script Swash Caps', cursive;
+                    color: $color-green;
+                    font-size: 4rem;
+                }
+                .discount-price{
+                    text-decoration: line-through;
+                }
+            }
+            .add-btn{
+                padding: 1.8rem 0;
+                width:100%;
+                background-color: $color-green;
+                border-radius: 10px;
+                display: flex;
+                text-align: center;
+                align-items: center;
+                gap: 1rem;
+                display: inline-block;
+                text-decoration: none;
+                color: white;
+                &:hover, &:active{
+                    background-color: darken($color-green, 15);
+                }
+                .add-btn-text{
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 37.5rem) {
+    body{
+        padding: 0 1rem !important;
+    }
+    .container{
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        height: 100vh;
+    }
+    .box{
+        display: grid;
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
+    }
+    .img-section{
+        height: 285px !important;
+        background-image: url(/images/image-product-mobile.jpg);
+        background-size: cover;
+        background-position-y: center !important;
+    }
+    .property-section{
+        gap: 0.8rem !important;
+    }
+    .title, .current-price{
+        font-size: 3.2rem !important;
+    }
+    .category,.description{
+        font-size: 1.2rem !important;
+        font-weight: 700 !important;
+    }
+    .description{
+        margin-bottom: 1.6rem !important;
+    }
+}
