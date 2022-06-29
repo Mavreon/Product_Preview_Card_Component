@@ -94,7 +94,7 @@ body {
     width: 100% !important; }
   .img-section {
     height: 285px !important;
-    background-image: url(/images/image-product-mobile.jpg);
+    background-image: url(/images/image-product-mobile.jpg) !important;
     background-size: cover;
     background-position-y: center !important; }
   .property-section {
