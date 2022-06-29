@@ -95,7 +95,7 @@ body {
   .img-section {
     height: 285px !important;
     background-image: url(/images/image-product-mobile.jpg) !important;
-    background-size: cover;
+    background-size: cover !important;
     background-position-y: center !important; }
   .property-section {
     gap: 0.8rem !important; }
